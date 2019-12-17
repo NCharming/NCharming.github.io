@@ -47,21 +47,21 @@
 </script>
 
   <meta name="description" content="单链表结构如下：   我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &amp;gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。 一般我们习惯性的将第一个节点称为头结点，并不存储实际的内容；而最后一个节点叫尾节点，是指向一个空地址NULL。 头结点 VS 头指针这里，会有一个头结点和头指针的概念：">
-<meta name="keywords" content="学习总结，随记杂谈">
+<meta name="keywords" content="基础数据结构,java 实现单链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单链表详解">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;index.html">
 <meta property="og:site_name" content="XiaoNi 的博客">
 <meta property="og:description" content="单链表结构如下：   我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &amp;gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。 一般我们习惯性的将第一个节点称为头结点，并不存储实际的内容；而最后一个节点叫尾节点，是指向一个空地址NULL。 头结点 VS 头指针这里，会有一个头结点和头指针的概念：">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;head_tail.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;special_insert.png">
-<meta property="og:updated_time" content="2019-12-12T03:08:09.960Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;head_tail.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;special_insert.png">
+<meta property="og:updated_time" content="2019-12-16T11:33:26.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/12/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/">
+<link rel="canonical" href="http://yoursite.com/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -188,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -212,7 +212,18 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-12-12 10:37:35 / Modified: 11:08:09" itemprop="dateCreated datePublished" datetime="2019-12-12T10:37:35+08:00">2019-12-12</time>
+              <time title="Created: 2019-12-16 19:26:44 / Modified: 19:33:26" itemprop="dateCreated datePublished" datetime="2019-12-16T19:26:44+08:00">2019-12-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">基础数据结构</span>
+                  </a>
+                </span>
             </span>
 
           
@@ -227,7 +238,7 @@
 
       
         <p>单链表结构如下：</p>
-<img src="/2019/12/12/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/singleLinkedList.jpg" class="">
+<img src="/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/singleLinkedList.jpg" class="">
 
 <p>我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。</p>
 <p>一般我们习惯性的将第一个节点称为<strong>头结点</strong>，并不存储实际的内容；而最后一个节点叫<strong>尾节点</strong>，是指向一个空地址NULL。</p>
@@ -238,7 +249,7 @@
 </blockquote>
 <p>链表中第一个节点的存储位置叫做头指针，那么整个链表的存取就必须从头指针开始。</p>
 <p><strong>“链表中第一个结点的存储位置叫做头指针”，如果链表有头结点，那么头指针就是指向头结点数据域的指针。</strong></p>
-<img src="/2019/12/12/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/head_tail.png" class="">
+<img src="/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/head_tail.png" class="">
 
 <p><strong>头结点的特性：</strong></p>
 <ul>
@@ -254,7 +265,7 @@
 <blockquote>
 <p>下面示意图是在指定位置插入一个节点的详解；其他比如删除操作同理</p>
 </blockquote>
-<img src="/2019/12/12/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/special_insert.png" class="">
+<img src="/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/special_insert.png" class="">
 
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
 <li>学会用画图辅助自己思考，可能有时候只靠想，脑子会不够用哦。</li>
@@ -269,16 +280,23 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 基础数据结构</a>
+              <a href="/tags/java-%E5%AE%9E%E7%8E%B0%E5%8D%95%E9%93%BE%E8%A1%A8/" rel="tag"># java 实现单链表</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/" rel="next" title="Hexo 搭建">
-      Hexo 搭建 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/" rel="prev" title="Hexo 搭建">
+      <i class="fa fa-chevron-left"></i> Hexo 搭建
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/16/Notepad++/" rel="next" title="Notepad++">
+      Notepad++ <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -352,14 +370,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>

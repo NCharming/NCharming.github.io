@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Notepad++从很早就开始使用 Notepad++ 这款小而美的文本编辑器，详情介绍和下载，请至官网。 以前真的就是单纯的当个文本编辑器在用，只是感觉很小，又比 Win 自带的笔记本好上很多，根本没有仔细的去挖掘这个小宝藏。 今天花了点时间，对 Notepad++ 的了解算是入门以上了，我觉任何支撑插件扩展的都是一个宝藏，下面我将介绍 Notepad++ 部分使用功能和感受： 下载进入官网即可">
+<meta name="keywords" content="实用小工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notepad++">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;index.html">
+<meta property="og:site_name" content="XiaoNi 的博客">
+<meta property="og:description" content="Notepad++从很早就开始使用 Notepad++ 这款小而美的文本编辑器，详情介绍和下载，请至官网。 以前真的就是单纯的当个文本编辑器在用，只是感觉很小，又比 Win 自带的笔记本好上很多，根本没有仔细的去挖掘这个小宝藏。 今天花了点时间，对 Notepad++ 的了解算是入门以上了，我觉任何支撑插件扩展的都是一个宝藏，下面我将介绍 Notepad++ 部分使用功能和感受： 下载进入官网即可">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CNotepad++%E4%B8%BB%E9%A2%98.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CNotepad++%E6%8F%92%E4%BB%B6.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CNotepad++_PluginManager.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CSQLinForm.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CCompare.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CCompare_diff.png">
+<meta property="og:updated_time" content="2019-12-16T11:43:46.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;Notepad&#x2F;.%5CNotepad++%5CNotepad++%E4%B8%BB%E9%A2%98.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/16/Notepad/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Notepad++ | XiaoNi 的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">XiaoNi 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">所谓朝走西来暮走东，人生恰似采花蜂</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/Notepad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XiaoNi">
+      <meta itemprop="description" content="学习总结，随记杂谈">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiaoNi 的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Notepad++
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-16 19:38:10 / Modified: 19:43:46" itemprop="dateCreated datePublished" datetime="2019-12-16T19:38:10+08:00">2019-12-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">工具分享</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Notepad"><a href="#Notepad" class="headerlink" title="Notepad++"></a>Notepad++</h1><p>从很早就开始使用 Notepad++ 这款小而美的文本编辑器，详情介绍和下载，请至<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">官网</a>。</p>
+<p>以前真的就是单纯的当个文本编辑器在用，只是感觉很小，又比 Win 自带的笔记本好上很多，根本没有仔细的去挖掘这个小宝藏。</p>
+<p>今天花了点时间，对 Notepad++ 的了解算是入门以上了，我觉任何支撑插件扩展的都是一个宝藏，下面我将介绍 Notepad++ 部分使用功能和感受：</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>进入官网即可下载，目前最新的 Notepad++ 7.8.1 release 可执行文件才 3.8M ，当然你也可以直接下载压缩包，也不过 4.4M 进行安装。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>首先体验到的就是外观，所以先介绍如何改变外观：让自己看的更舒服一点</p>
+<h3 id="改变主题"><a href="#改变主题" class="headerlink" title="改变主题"></a>改变主题</h3><p><img src=".%5CNotepad++%5CNotepad++%E4%B8%BB%E9%A2%98.png" alt="Notepad++主题改变"></p>
+<h3 id="添加插件"><a href="#添加插件" class="headerlink" title="添加插件"></a>添加插件</h3><p>在安装的时候，如果你注意到，他会默认帮你安装好几个插件，今天我只介绍平时我自己感觉特别需要的功能。</p>
+<p>添加插件有两种方式：</p>
+<h4 id="直接安装方式"><a href="#直接安装方式" class="headerlink" title="直接安装方式"></a>直接安装方式</h4><p>我在直接下载安装后，插件 -&gt; 软件管理，点击就是下面的界面</p>
+<p><img src=".%5CNotepad++%5CNotepad++%E6%8F%92%E4%BB%B6.png" alt=""></p>
+<p>我自己通过下载 .dll 文件的方式又安装了一个插件管理</p>
+<p><img src=".%5CNotepad++%5CNotepad++_PluginManager.png" alt=""></p>
+<blockquote>
+<p>以上两种管理插件都可以直接下载</p>
+</blockquote>
+<h4 id="dll方式"><a href="#dll方式" class="headerlink" title=".dll方式"></a>.dll方式</h4><p>当我们直接安装不了的时候，可以去<a href="https://sourceforge.net/projects/npp-plugins/files/" target="_blank" rel="noopener"><strong>下载</strong></a> .dll 文件的方式安装 。下载后，解压，把 .dll 文件复制到 Notepad++ -&gt; plugins 文件下，然后重启即可。</p>
+<p>当然也有这两种方式都安装不了的，不过我今天介绍的基本第一种方式就能解决，特别方便。</p>
+<h3 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h3><p>主要推荐 <strong>JSON Viewer、SQLinForm、Compare</strong> 三个吧</p>
+<h4 id="JSON-Viewer"><a href="#JSON-Viewer" class="headerlink" title="JSON Viewer"></a>JSON Viewer</h4><p>格式化你的 JSON 串，再也不用打开 json.cn 在线(断网了,可就凉凉了)工具了。</p>
+<p>![](.\Notepad++\JSON Viewer.png)</p>
+<blockquote>
+<p>前面可折叠，是 Notepad++ 本身的功能，在导航栏中 语言-&gt;JSON 即可</p>
+</blockquote>
+<h4 id="SQLinForm"><a href="#SQLinForm" class="headerlink" title="SQLinForm"></a>SQLinForm</h4><p>格式化你的 SQL 语句，这个感觉特别棒，超好看的呢</p>
+<p><img src=".%5CNotepad++%5CSQLinForm.png" alt=""></p>
+<h4 id="XML-Tools"><a href="#XML-Tools" class="headerlink" title="XML Tools"></a>XML Tools</h4><p>顾名思义，就是格式化 XML 格式的，不过现在开发多是 JSON，有兴趣的自己安装看看效果</p>
+<h4 id="Compare"><a href="#Compare" class="headerlink" title="Compare"></a>Compare</h4><p>这个是真很好了，当然你也可以去下载 Beyond Compare 4，首先文件大不说，还不是免费的。所以这个简直不要太棒了。</p>
+<p><img src=".%5CNotepad++%5CCompare.png" alt=""></p>
+<p>当两个文件相同，会提示如上，当不同是提示如下：</p>
+<p><img src=".%5CNotepad++%5CCompare_diff.png" alt=""></p>
+<h4 id="NppExport"><a href="#NppExport" class="headerlink" title="NppExport"></a>NppExport</h4><p>比如上面带颜色的代码，我要复制到 Word 中，也可以将颜色也复制过去。</p>
+<h4 id="NppFTP"><a href="#NppFTP" class="headerlink" title="NppFTP"></a>NppFTP</h4><p>这个我试了下，可以连接，但是总感觉用的不爽(我现在在用 UltraEdit )，不过想集成于一体，还是很不错的哦。</p>
+<h1 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h1><p>暂时就是这些了，基本足够应付我们日常的操作了，而且还这么小巧，为什么不用呢？以后有用到更好的插件再添加吧！</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" rel="tag"># 实用小工具</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/16/Notepad++/" rel="prev" title="Notepad++">
+      <i class="fa fa-chevron-left"></i> Notepad++
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Notepad"><span class="nav-number">1.</span> <span class="nav-text">Notepad++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-number">1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改变主题"><span class="nav-number">1.2.1.</span> <span class="nav-text">改变主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加插件"><span class="nav-number">1.2.2.</span> <span class="nav-text">添加插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#直接安装方式"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">直接安装方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dll方式"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">.dll方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件推荐"><span class="nav-number">1.2.3.</span> <span class="nav-text">插件推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON-Viewer"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">JSON Viewer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQLinForm"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">SQLinForm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML-Tools"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">XML Tools</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compare"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">Compare</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NppExport"><span class="nav-number">1.2.3.5.</span> <span class="nav-text">NppExport</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NppFTP"><span class="nav-number">1.2.3.6.</span> <span class="nav-text">NppFTP</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tip"><span class="nav-number">2.</span> <span class="nav-text">Tip</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">XiaoNi</p>
+  <div class="site-description" itemprop="description">学习总结，随记杂谈</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XiaoNi</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
