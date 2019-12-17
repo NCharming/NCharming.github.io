@@ -55,7 +55,7 @@
 <meta property="og:description" content="说在前面： 此篇文章是默认你已经成功搭建了 Hexo，即你至少能用 localhost:4000 来访问你本地的 Hexo 了。如果你接下来不知道怎么玩了或者有点思路但是不知道下手，那么我这篇文章可能适合你 换个主题 GitHub 上有很多主题，自己直接去上面搜索 Hexo-theme 关键字即可。随便点进去，里面会有示例网站，然后自己挑个自己喜欢的。 进入到自己安装的 Hexo 文件夹下：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Hexo%E6%90%AD%E5%BB%BA&#x2F;Hexo%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9.png">
-<meta property="og:updated_time" content="2019-12-16T11:33:54.125Z">
+<meta property="og:updated_time" content="2019-12-16T14:38:16.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Hexo%E6%90%AD%E5%BB%BA&#x2F;Hexo%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9.png">
 
@@ -112,13 +112,7 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">XiaoNi 的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
+
         <p class="site-subtitle">所谓朝走西来暮走东，人生恰似采花蜂</p>
   </div>
 
@@ -189,7 +183,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="XiaoNi">
       <meta itemprop="description" content="学习总结，随记杂谈">
     </span>
@@ -216,7 +210,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-16 19:33:54" itemprop="dateModified" datetime="2019-12-16T19:33:54+08:00">2019-12-16</time>
+                <time title="Modified: 2019-12-16 22:38:16" itemprop="dateModified" datetime="2019-12-16T22:38:16+08:00">2019-12-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,6 +257,7 @@
 <blockquote>
 <p>hexo new [layout] &lt;title&gt;</p>
 </blockquote>
+<p>tip：上面的  &lt;title&gt;  遇到标签冲突了；所以需要在 &lt;title&gt;  前面加一个 \ 转义词。</p>
 <h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p> Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建者三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹 </p>
 <table>
 <thead>
@@ -407,6 +402,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XiaoNi"
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">XiaoNi</p>
   <div class="site-description" itemprop="description">学习总结，随记杂谈</div>
 </div>
@@ -414,7 +411,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -425,7 +422,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
