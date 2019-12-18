@@ -46,18 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="单链表结构如下：   我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &amp;gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。 一般我们习惯性的将第一个节点称为头结点，并不存储实际的内容；而最后一个节点叫尾节点，是指向一个空地址NULL。 头结点 VS 头指针这里，会有一个头结点和头指针的概念：">
+  <meta name="description" content="Java 单链表 实现，浅析了基本的单链表结构，并实现了基本操作…">
 <meta name="keywords" content="基础数据结构,java 实现单链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单链表详解">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;index.html">
 <meta property="og:site_name" content="XiaoNi 的博客">
-<meta property="og:description" content="单链表结构如下：   我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &amp;gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。 一般我们习惯性的将第一个节点称为头结点，并不存储实际的内容；而最后一个节点叫尾节点，是指向一个空地址NULL。 头结点 VS 头指针这里，会有一个头结点和头指针的概念：">
+<meta property="og:description" content="Java 单链表 实现，浅析了基本的单链表结构，并实现了基本操作…">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;head_tail.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;special_insert.png">
-<meta property="og:updated_time" content="2019-12-16T11:33:26.263Z">
+<meta property="og:updated_time" content="2019-12-18T00:52:05.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3&#x2F;singleLinkedList.jpg">
 
@@ -204,10 +204,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-16 19:26:44 / Modified: 19:33:26" itemprop="dateCreated datePublished" datetime="2019-12-16T19:26:44+08:00">2019-12-16</time>
+              <time title="Created: 2019-12-16 19:26:44" itemprop="dateCreated datePublished" datetime="2019-12-16T19:26:44+08:00">2019-12-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-18 08:52:05" itemprop="dateModified" datetime="2019-12-18T08:52:05+08:00">2019-12-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -231,7 +237,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>单链表结构如下：</p>
+        <p> Java 单链表 实现，浅析了基本的单链表结构，并实现了基本操作…</p>
+<a id="more"></a>
+
+<p>单链表结构如下：</p>
 <img src="/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/singleLinkedList.jpg" class="">
 
 <p>我们知道数组是连续的存储空间；而链表不需要，因为有「指针」，它通过“指针”将一组零散的内存块串联起来使用 。当系统总容量 &gt;100M；但是不连续，此时我们无法申请容量为 100M 的数组，但是链表可以。</p>

@@ -46,18 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="当然队列和栈拥有的操作一样，只有入队列和出队列两个操作：  入队列：在队尾加入一个元素 出队列：在队头取出一个元素  就像链表可以自由在中间任意某个位置插入和删除，而栈和队列只能在固定的位置操作。这其实就是创造者们所定义的，我们只有给予其一定的限制，才能获得我们想要的特性。  具体实现顺序队列当然，用数组实现的队列叫顺序队列，接下上完整代码吧。 1public class Queue &amp;#123;">
+  <meta name="description" content="Java 数组|单链表 实现队列，小白也能看懂的图文并茂的文章…">
 <meta name="keywords" content="基础数据结构,java实现队列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java实现队列">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;java%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97&#x2F;index.html">
 <meta property="og:site_name" content="XiaoNi 的博客">
-<meta property="og:description" content="当然队列和栈拥有的操作一样，只有入队列和出队列两个操作：  入队列：在队尾加入一个元素 出队列：在队头取出一个元素  就像链表可以自由在中间任意某个位置插入和删除，而栈和队列只能在固定的位置操作。这其实就是创造者们所定义的，我们只有给予其一定的限制，才能获得我们想要的特性。  具体实现顺序队列当然，用数组实现的队列叫顺序队列，接下上完整代码吧。 1public class Queue &amp;#123;">
+<meta property="og:description" content="Java 数组|单链表 实现队列，小白也能看懂的图文并茂的文章…">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191214170632392.jpg?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc5Mzc3Mg&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;2019121417065432.png?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc5Mzc3Mg&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191214170700970.jpg?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc5Mzc3Mg&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-12-16T13:51:44.387Z">
+<meta property="og:updated_time" content="2019-12-18T00:48:28.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191214170632392.jpg?x-oss-process&#x3D;image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTc5Mzc3Mg&#x3D;&#x3D;,size_16,color_FFFFFF,t_70">
 
@@ -204,10 +204,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2019-12-16 21:50:29 / Modified: 21:51:44" itemprop="dateCreated datePublished" datetime="2019-12-16T21:50:29+08:00">2019-12-16</time>
+              <time title="Created: 2019-12-16 21:50:29" itemprop="dateCreated datePublished" datetime="2019-12-16T21:50:29+08:00">2019-12-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-18 08:48:28" itemprop="dateModified" datetime="2019-12-18T08:48:28+08:00">2019-12-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -231,7 +237,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>当然队列和栈拥有的操作一样，只有入队列和出队列两个操作：</p>
+        <p> Java 数组|单链表 实现队列，小白也能看懂的图文并茂的文章…</p>
+<a id="more"></a>
+
+<p>当然队列和栈拥有的操作一样，只有入队列和出队列两个操作：</p>
 <ul>
 <li>入队列：在队尾加入一个元素</li>
 <li>出队列：在队头取出一个元素</li>
