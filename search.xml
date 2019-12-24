@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>几大常见排序总结</title>
+      <link href="/2019/12/24/%E5%87%A0%E5%A4%A7%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93/"/>
+      <url>/2019/12/24/%E5%87%A0%E5%A4%A7%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<p>暂时只包括：冒泡排序、插入排序、选择排序、归并排序、快速排序、计数排序、基数排序、桶排序 8种排序。</p><table><thead><tr><th></th><th>时间复杂度</th><th>稳定排序？</th><th>原地排序？</th><th>基于比较？</th></tr></thead><tbody><tr><td>冒泡</td><td>O(n<sup>2</sup>)</td><td>√</td><td>√</td><td>√</td></tr><tr><td>插入</td><td>O(n<sup>2</sup>)</td><td>√</td><td>√</td><td>√</td></tr><tr><td>选择</td><td>O(n<sup>2</sup>)</td><td>×</td><td>√</td><td>√</td></tr><tr><td>快速</td><td>O(nlogn)</td><td>×</td><td>√</td><td>√</td></tr><tr><td>归并</td><td>O(nlogn)</td><td>√</td><td>×</td><td>√</td></tr><tr><td>计数</td><td>O(n+k)k是数据范围</td><td>√</td><td>×</td><td>×</td></tr><tr><td>桶</td><td>O(n)</td><td>√</td><td>×</td><td>×</td></tr><tr><td>基数</td><td>O(dn)d是维度</td><td>√</td><td></td><td>×</td></tr></tbody></table><h1 id="如何分析一个“排序算法”？"><a href="#如何分析一个“排序算法”？" class="headerlink" title="如何分析一个“排序算法”？"></a>如何分析一个“排序算法”？</h1><h2 id="算法的执行效率"><a href="#算法的执行效率" class="headerlink" title="算法的执行效率"></a>算法的执行效率</h2><ul><li>最好、最坏、平均情况时间复杂度</li><li>时间复杂度的系数、常数、低级</li><li>比较次数和交换次数</li></ul><p>以上对于一个算法排序时间的影响都是很大的，我们在实际应用中应当考虑</p><h2 id="算法的内存消耗"><a href="#算法的内存消耗" class="headerlink" title="算法的内存消耗"></a>算法的内存消耗</h2><p>就是算法的空间复杂度；这里引入了一个新的概念「原地排序」。</p><p><strong>原地排序：</strong>特指空间复杂度是O(1)的排序算法</p><h2 id="算法的稳定性"><a href="#算法的稳定性" class="headerlink" title="算法的稳定性"></a>算法的稳定性</h2><p>仅仅是上面的指标是不够用来衡量算法好坏的。</p><p><strong>稳定性：</strong>如果待排序的序列中存在值相等的元素，经过排序之后，相等元素之间原有的先后顺序不变。</p><blockquote><p>比如我们有一组数据 2，9，3，4，8，3，按照大小排序之后就是 2，3，3，4，8，9。这组数据里有两个 3。经过某种排序算法排序之后，如果两个 3 的前后顺序没有改变，那我们就把这种排序算法叫作稳定的排序算法；如果前后顺序发生变化，那对应的排序算法就叫作不稳定的排序算法。 </p></blockquote><p>那么在实际的软件开发中，我们要排序的是一组对象，需要按照对象的某个 key 来排序。</p><p>我们要给某电商系统的 “订单” 排序，订单有两个属性，一个是下单时间、另一个下单金额；</p><p><strong>问题： 我们希望按照金额从小到大对订单数据排序。对于金额相同的订单，我们希望按照下单时间从早到晚有序</strong> </p><p><strong>解决一：</strong></p><p>​        先对金额排序，再对<strong>金额相同的小区间</strong>对时间进行排序。但是这样实现非常复杂。</p><p><strong>解决二：</strong></p><p>​    先整体对时间进行排序，再用稳定排序算法对整体进行金额排序。这样两遍排序之后就得到我们想要的了。</p><p>​    第一次排序后，时间已经排好了，因为第二次是稳定排序，所以相同金额的排序不会发生变化。</p><blockquote><p>tip：为啥不先对金额，在对时间进行稳定排序？</p><p>这样金额顺序可能会被打乱，因为题目大前提是整体希望按照金额排序，金额相同的才是按照时间排序</p></blockquote><hr><p>接下来就用实际代码看看如何实践上面的</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础排序算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础数据结构 </tag>
+            
+            <tag> 基础排序算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java实现队列</title>
       <link href="/2019/12/16/java%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/"/>
       <url>/2019/12/16/java%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/</url>

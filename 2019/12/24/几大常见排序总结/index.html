@@ -46,20 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="说在前面： 此篇文章是默认你已经成功搭建了 Hexo，即你至少能用 localhost:4000 来访问你本地的 Hexo 了。如果你接下来不知道怎么玩了或者有点思路但是不知道下手，那么我这篇文章可能适合你">
-<meta name="keywords" content="Hexo 搭建博客">
+  <meta name="description" content="暂时只包括：冒泡排序、插入排序、选择排序、归并排序、快速排序、计数排序、基数排序、桶排序 8种排序。     时间复杂度 稳定排序？ 原地排序？ 基于比较？    冒泡 O(n2) √ √ √   插入 O(n2) √ √ √   选择 O(n2) × √ √   快速 O(nlogn) × √ √   归并 O(nlogn) √ × √   计数 O(n+k)k是数据范围 √ × ×   桶 O">
+<meta name="keywords" content="基础数据结构,基础排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 搭建">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Hexo%E6%90%AD%E5%BB%BA&#x2F;index.html">
+<meta property="og:title" content="几大常见排序总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;24&#x2F;%E5%87%A0%E5%A4%A7%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93&#x2F;index.html">
 <meta property="og:site_name" content="XiaoNi 的博客">
-<meta property="og:description" content="说在前面： 此篇文章是默认你已经成功搭建了 Hexo，即你至少能用 localhost:4000 来访问你本地的 Hexo 了。如果你接下来不知道怎么玩了或者有点思路但是不知道下手，那么我这篇文章可能适合你">
+<meta property="og:description" content="暂时只包括：冒泡排序、插入排序、选择排序、归并排序、快速排序、计数排序、基数排序、桶排序 8种排序。     时间复杂度 稳定排序？ 原地排序？ 基于比较？    冒泡 O(n2) √ √ √   插入 O(n2) √ √ √   选择 O(n2) × √ √   快速 O(nlogn) × √ √   归并 O(nlogn) √ × √   计数 O(n+k)k是数据范围 √ × ×   桶 O">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Hexo%E6%90%AD%E5%BB%BA&#x2F;Hexo%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9.png">
-<meta property="og:updated_time" content="2019-12-18T00:53:49.780Z">
+<meta property="og:updated_time" content="2019-12-24T06:05:17.748Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Hexo%E6%90%AD%E5%BB%BA&#x2F;Hexo%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/">
+<link rel="canonical" href="http://yoursite.com/2019/12/24/%E5%87%A0%E5%A4%A7%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -71,7 +69,7 @@
   };
 </script>
 
-  <title>Hexo 搭建 | XiaoNi 的博客</title>
+  <title>几大常见排序总结 | XiaoNi 的博客</title>
   
 
 
@@ -180,7 +178,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/%E5%87%A0%E5%A4%A7%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -193,7 +191,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo 搭建
+          几大常见排序总结
         </h1>
 
         <div class="post-meta">
@@ -202,24 +200,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2019-12-12 11:12:51" itemprop="dateCreated datePublished" datetime="2019-12-12T11:12:51+08:00">2019-12-12</time>
+              <time title="Created: 2019-12-24 14:00:51 / Modified: 14:05:17" itemprop="dateCreated datePublished" datetime="2019-12-24T14:00:51+08:00">2019-12-24</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-12-18 08:53:49" itemprop="dateModified" datetime="2019-12-18T08:53:49+08:00">2019-12-18</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">基础排序算法</span>
                   </a>
                 </span>
             </span>
@@ -235,88 +227,101 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>说在前面：</strong></p>
-<p>此篇文章是默认你已经成功搭建了 Hexo，即你至少能用 localhost:4000 来访问你本地的 Hexo 了。如果你接下来不知道怎么玩了或者有点思路但是不知道下手，那么我这篇文章可能适合你</p>
-<a id="more"></a>
-
-<h1 id="换个主题"><a href="#换个主题" class="headerlink" title="换个主题"></a>换个主题</h1><ol>
-<li>GitHub 上有很多主题，自己直接去上面搜索 Hexo-theme 关键字即可。随便点进去，里面会有示例网站，然后自己挑个自己喜欢的。</li>
-<li>进入到自己安装的 Hexo 文件夹下：</li>
-</ol>
-<blockquote>
-<p>git clone <a href="https://github.com/iissnan/hexo-theme-next.git" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next.git</a> themes/next</p>
-<p>后面的 themes/next 表示你克隆下来存放的路径</p>
-<p>咳咳，如果下载不下来(time_out)，直接去 GitHub Download ZIP 再解压到 themes 文件夹下</p>
-</blockquote>
-<ol start="3">
-<li>next 下也有很多子主题哦，进入到 next 下面的 _config.yml 文件：直接到 <strong>#Schemes</strong> 去选择自己喜欢的</li>
-<li>回到 <strong>Hexo 下 _config.yml 文件，theme: next</strong>  即可。注意这里的 next 是你在 themes 文件下的文件夹的名字，这里这个 next ，你可以随意起名字；只要 Hexo 下 _config.yml 文件，theme: XXX 对应即可。</li>
-</ol>
-<p>此时，主题就换好了！</p>
-<h1 id="写篇文章"><a href="#写篇文章" class="headerlink" title="写篇文章"></a>写篇文章</h1><p>还是在你本地的 Hexo 文件夹下面，就在这个界面，右键点击你的 Git Bash Here</p>
-<img src="/2019/12/12/Hexo%E6%90%AD%E5%BB%BA/Hexo%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9.png" class="">
-
-<blockquote>
-<p>hexo new [layout] &lt;title&gt;</p>
-</blockquote>
-<p>tip：上面的  &lt;title&gt;  遇到标签冲突了；所以需要在 &lt;title&gt;  前面加一个 \ 转义词。</p>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p> Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建者三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹 </p>
+        <p>暂时只包括：冒泡排序、插入排序、选择排序、归并排序、快速排序、计数排序、基数排序、桶排序 8种排序。</p>
 <table>
 <thead>
 <tr>
-<th>布局</th>
-<th>路径</th>
+<th></th>
+<th>时间复杂度</th>
+<th>稳定排序？</th>
+<th>原地排序？</th>
+<th>基于比较？</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>post</td>
-<td>source/_posts</td>
+<td>冒泡</td>
+<td>O(n<sup>2</sup>)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td>page</td>
-<td>source</td>
+<td>插入</td>
+<td>O(n<sup>2</sup>)</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
 </tr>
 <tr>
-<td>draft</td>
-<td>source/_draft</td>
+<td>选择</td>
+<td>O(n<sup>2</sup>)</td>
+<td>×</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>快速</td>
+<td>O(nlogn)</td>
+<td>×</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>归并</td>
+<td>O(nlogn)</td>
+<td>√</td>
+<td>×</td>
+<td>√</td>
+</tr>
+<tr>
+<td>计数</td>
+<td>O(n+k)k是数据范围</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>桶</td>
+<td>O(n)</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>基数</td>
+<td>O(dn)d是维度</td>
+<td>√</td>
+<td></td>
+<td>×</td>
 </tr>
 </tbody></table>
+<h1 id="如何分析一个“排序算法”？"><a href="#如何分析一个“排序算法”？" class="headerlink" title="如何分析一个“排序算法”？"></a>如何分析一个“排序算法”？</h1><h2 id="算法的执行效率"><a href="#算法的执行效率" class="headerlink" title="算法的执行效率"></a>算法的执行效率</h2><ul>
+<li>最好、最坏、平均情况时间复杂度</li>
+<li>时间复杂度的系数、常数、低级</li>
+<li>比较次数和交换次数</li>
+</ul>
+<p>以上对于一个算法排序时间的影响都是很大的，我们在实际应用中应当考虑</p>
+<h2 id="算法的内存消耗"><a href="#算法的内存消耗" class="headerlink" title="算法的内存消耗"></a>算法的内存消耗</h2><p>就是算法的空间复杂度；这里引入了一个新的概念「原地排序」。</p>
+<p><strong>原地排序：</strong>特指空间复杂度是O(1)的排序算法</p>
+<h2 id="算法的稳定性"><a href="#算法的稳定性" class="headerlink" title="算法的稳定性"></a>算法的稳定性</h2><p>仅仅是上面的指标是不够用来衡量算法好坏的。</p>
+<p><strong>稳定性：</strong>如果待排序的序列中存在值相等的元素，经过排序之后，相等元素之间原有的先后顺序不变。</p>
 <blockquote>
-<p>比如：hexo new Hexo搭建</p>
-<p>就是在 source/_posts 下创建了一个名为 Hexo搭建 的 .md 文件</p>
+<p>比如我们有一组数据 2，9，3，4，8，3，按照大小排序之后就是 2，3，3，4，8，9。这组数据里有两个 3。经过某种排序算法排序之后，如果两个 3 的前后顺序没有改变，那我们就把这种排序算法叫作稳定的排序算法；如果前后顺序发生变化，那对应的排序算法就叫作不稳定的排序算法。 </p>
 </blockquote>
-<h2 id="插个图片"><a href="#插个图片" class="headerlink" title="插个图片"></a>插个图片</h2><p>我们在写文章的时候，难免需要图片来帮助说明或者表达语言难以表达的事物。这个时候，觉得要是可以放个图片就好了。</p>
-<ol>
-<li>到 Hexo 下 _config.yml 文件中将 post_asset_folder: 改为 true</li>
-</ol>
-<p>这将使得你每次在 new 文章的时候，都会自动帮你创建一个在同目录的同名文件夹，里面就可以放你的图片</p>
-<ol start="2">
-<li>引用：第一想到的是使用相对路径去引用，不过，我试过了；我这不可以（在 .md 中可以看到图片效果，但是通过浏览器访问就凉了），那么换个方法：</li>
-</ol>
+<p>那么在实际的软件开发中，我们要排序的是一组对象，需要按照对象的某个 key 来排序。</p>
+<p>我们要给某电商系统的 “订单” 排序，订单有两个属性，一个是下单时间、另一个下单金额；</p>
+<p><strong>问题： 我们希望按照金额从小到大对订单数据排序。对于金额相同的订单，我们希望按照下单时间从早到晚有序</strong> </p>
+<p><strong>解决一：</strong></p>
+<p>​        先对金额排序，再对<strong>金额相同的小区间</strong>对时间进行排序。但是这样实现非常复杂。</p>
+<p><strong>解决二：</strong></p>
+<p>​    先整体对时间进行排序，再用稳定排序算法对整体进行金额排序。这样两遍排序之后就得到我们想要的了。</p>
+<p>​    第一次排序后，时间已经排好了，因为第二次是稳定排序，所以相同金额的排序不会发生变化。</p>
 <blockquote>
-
-
-<p>Hexo 本地内容.png：是我自己放在对应文件夹下的图片名字</p>
+<p>tip：为啥不先对金额，在对时间进行稳定排序？</p>
+<p>这样金额顺序可能会被打乱，因为题目大前提是整体希望按照金额排序，金额相同的才是按照时间排序</p>
 </blockquote>
-<h1 id="添加分类"><a href="#添加分类" class="headerlink" title="添加分类"></a>添加分类</h1><p>进入到本地博客根目录：</p>
-<blockquote>
-<p>hexo new page categoriew</p>
-</blockquote>
-<p>成功后会提示：在此目录下创建了一个 index.md 文件 ..\source\categories\index.md </p>
-<p>打开此 index.md</p>
-<blockquote>
-<p>title: categories<br>date: 2019-12-16 19:18:03</p>
-</blockquote>
-<p>加入：</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">type</span>: <span class="string">"categories"</span></span></pre></td></tr></table></figure>
-</blockquote>
-<p>然后在你写的文章最上面加入：</p>
-<blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&gt;<span class="selector-tag">categories</span>: </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&gt;<span class="selector-tag">-</span> <span class="selector-tag">Hexo</span> </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&gt;注：<span class="selector-tag">Hexo</span> <span class="selector-tag">hexo</span>一篇文章只能属于一个分类</span></pre></td></tr></table></figure>
-</blockquote>
-<p>此时分类即可用了。</p>
-<p><strong>tip：</strong>其他的关于、标签类比即可</p>
+<hr>
+<p>接下来就用实际代码看看如何实践上面的</p>
 
     </div>
 
@@ -326,7 +331,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="tag"># Hexo 搭建博客</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 基础数据结构</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" rel="tag"># 基础排序算法</a>
           </div>
 
         
@@ -334,11 +340,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2019/12/16/%E5%8D%95%E9%93%BE%E8%A1%A8%E8%AF%A6%E8%A7%A3/" rel="next" title="单链表详解">
-      单链表详解 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/12/16/java%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" rel="prev" title="java实现队列">
+      <i class="fa fa-chevron-left"></i> java实现队列
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -398,7 +404,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#换个主题"><span class="nav-number">1.</span> <span class="nav-text">换个主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写篇文章"><span class="nav-number">2.</span> <span class="nav-text">写篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#布局"><span class="nav-number">2.1.</span> <span class="nav-text">布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插个图片"><span class="nav-number">2.2.</span> <span class="nav-text">插个图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加分类"><span class="nav-number">3.</span> <span class="nav-text">添加分类</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何分析一个“排序算法”？"><span class="nav-number">1.</span> <span class="nav-text">如何分析一个“排序算法”？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的执行效率"><span class="nav-number">1.1.</span> <span class="nav-text">算法的执行效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的内存消耗"><span class="nav-number">1.2.</span> <span class="nav-text">算法的内存消耗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的稳定性"><span class="nav-number">1.3.</span> <span class="nav-text">算法的稳定性</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
